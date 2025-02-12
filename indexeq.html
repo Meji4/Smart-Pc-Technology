@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0b0f4b;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .back-to-home {
+            color: white;
+            padding: 10px 20px;
+            background-color: #0b0f4b;
+            border-radius: 5px;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .product h2 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .product p {
+            margin: 10px 0;
+        }
+
+        .product .stock {
+            font-weight: bold;
+            color: green;
+        }
+
+        .product button {
+            background-color: #0b0f4b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0b0f4b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 1000;
+            width: 80%;
+            max-width: 500px;
+            overflow-y: auto;
+        }
+
+        .cart-modal h3 {
+            text-align: center;
+        }
+
+        .cart-modal .cart-details {
+            margin: 10px 0;
+        }
+
+        .cart-modal .cart-details span {
+            font-weight: bold;
+        }
+
+        .cart-modal .cart-form input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .cart-modal .cart-form button {
+            background-color: #0b0f4b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .cart-modal .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #0b0f4b;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .remove-item {
+            color: red;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="back-to-home">Regresar al Inicio</a>
+    <h1>
+        <img src="LOGO SMART.png" alt="Logo" class="logo">
+        Ventas de Equipos  SMART PC
+    </h1>
+</header>
+
+<section class="product-container">
+    <!-- Productos -->
+    <article class="product">
+        <img src="pantalla.png" alt="Producto 1">
+        <h2>Pantalla Marca Quasad de 20 pulgadas</h2>
+        <p>Perfecta para jugar comodamente</p>
+        <p class="price">Precio: $8.50</p>
+        <p class="stock">En stock: 5</p>
+      
+    </article>
+
+    <article class="product">
+        <img src="impresora mukltifuncional.png" alt="Producto 9">
+        <h2>Impresora Multifuncional</h2>
+        <p>Impresora multifuncional con escáner y copias, ideal para oficina y uso doméstico.</p>
+        <p class="price">Precio: $120</p>
+        <p class="stock">En stock: 8</p>
+        
+    </article>
+    
+
+    <article class="product">
+        <img src="core i 7.png" alt="Producto 17">
+        <h2>CPU Intel Core i7</h2>
+        <p>Procesador Intel Core i7 de décima generación, 8 núcleos y 16 hilos, ideal para gaming y trabajo intensivo.</p>
+        <p class="price">Precio: $350</p>
+        <p class="stock">En stock: 12</p>
+       
+    </article>
+    
+    
+
+    <article class="product">
+        <img src="epsonl3250.png" alt="Producto 21">
+        <h2>Impresora Modelo L3250</h2>
+        <p>Impresora láser monocromática L3250, ideal para impresión rápida y eficiente en oficinas.</p>
+        <p class="price">Precio: $150</p>
+        <p class="stock">En stock: 10</p>
+       
+    </article>
+    
+
+    <article class="product">
+        <img src="laptop vivobuk.png" alt="Producto 22">
+        <h2>Laptop ASUS VivoBook 15</h2>
+        <p>Laptop con procesador AMD Ryzen 5, 8GB de RAM y 512GB SSD, ideal para trabajo y entretenimiento.</p>
+        <p class="price">Precio: $700</p>
+        <p class="stock">En stock: 20</p>
+       
+    </article>
+    
+
+    <article class="product">
+        <img src="rayzen.png" alt="Producto 23">
+        <h2>Procesador AMD Ryzen 5 5600X</h2>
+        <p>Procesador AMD Ryzen 5 5600X, 6 núcleos y 12 hilos, ideal para gaming y tareas multitarea.</p>
+        <p class="price">Precio: $250</p>
+        <p class="stock">En stock: 20</p>
+        
+    </article>
+    
+
+    <article class="product">
+        <img src="placa asus.png" alt="Producto 24">
+        <h2>Placa Madre ASUS TUF Gaming B550-PLUS</h2>
+        <p>Placa madre ATX con chipset B550, compatible con procesadores AMD Ryzen, ideal para gaming y overclocking.</p>
+        <p class="price">Precio: $150</p>
+        <p class="stock">En stock: 15</p>
+      
+    </article>
+    
+</section>
+</script>
+</body>
+</html>

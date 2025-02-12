@@ -1,0 +1,190 @@
+<!DOCTYPE html>  
+<html lang="es">  
+
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Smart PC Servicio Técnico</title>  
+    <link href="LOGO SMART.png" rel="stylesheet">  
+
+    <style>  
+        @font-face {  
+            font-family: 'Audiowide';  
+            src: url('Audiowide-Regular.ttf') format('truetype');  
+            font-weight: normal;  
+            font-style: normal;  
+        }  
+
+        * {  
+            box-sizing: border-box;  
+        }  
+
+        body {  
+            display: flex;  
+            flex-direction: column;  
+            min-height: 100vh;  
+            background-color: #f7f9fc; /* Color de fondo claro */  
+            margin: 0;  
+            padding: 0;  
+            font-size: 16px;  
+            color: #333; /* Color de texto oscuro */  
+            font-family: Arial, sans-serif; /* Fuente normal para el contenido */  
+        }  
+
+        header {  
+            background-color: #08236e; /* Fondo azul oscuro */  
+            padding: 20px;  
+            display: flex;  
+            align-items: center;  
+            justify-content: space-between;  
+            color: white;  
+        }  
+
+        .logo {  
+            height: 50px; /* Ajusta el tamaño de la imagen según sea necesario */  
+            margin-right: 10px;  
+        }  
+
+        .header-title {  
+            flex-grow: 1;  
+            text-align: center;  
+            font-family: 'Audiowide', sans-serif; /* Aplicamos la fuente Audiowide solo al título */  
+            font-size: 24px; /* Tamaño del texto del título */  
+            color: #FF0000; /* Cambiar color a rojo del título */  
+        }  
+
+        h2 {  
+            color: #106ea5; /* Color azul para otros títulos */  
+            margin: 15px 0;  
+            border-bottom: 2px solid #062a75; /* Línea debajo del título */  
+            padding-bottom: 5px;  
+            text-align: center;  
+        }  
+
+        .back-button {  
+            background-color: #FF0000; /* Rojo */  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            padding: 10px 15px;  
+            cursor: pointer;  
+            text-align: center;  
+            text-decoration: none;  
+            margin-right: 10px;  
+            transition: background-color 0.3s ease;  
+        }  
+
+        .back-button:hover {  
+            background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */  
+        }  
+
+        .service-container {  
+            display: flex;  
+            flex-wrap: wrap;  
+            margin: 20px 0;  
+            flex: 1;  
+        }  
+
+        .service-box {  
+            background-color: white;  
+            border: 2px solid #ddd;  
+            border-radius: 5px;  
+            padding: 15px;  
+            flex: 1;  
+            margin: 10px;  
+            min-width: 300px; /* Ancho mínimo para las cajas */  
+            transition: all 0.3s ease;  
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+            max-height: 150px; /* Altura máxima que puede ampliar */  
+            overflow-y: auto; /* Habilita barra de desplazamiento vertical */  
+        }  
+
+        .service-box:hover {  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+        }  
+
+        #caja1 {  
+            border-color: #1369b9;  
+        }  
+
+        #caja2 {  
+            border-color: #085dbe;  
+        }  
+
+        #caja3 {  
+            border-color: #046ec4;  
+        }  
+
+        #caja4 {  
+            border-color: #0876cf;  
+        }  
+
+        .content {  
+            margin-top: 10px; /* Espacio entre el contenido y el objetivo */  
+        }  
+
+        footer {  
+            text-align: center;  
+            margin-top: auto; /* Mueve el pie de página hacia abajo */  
+            padding-top: 10px;  
+            color: #333; /* Color de texto oscuro */  
+            font-size: 14px;  
+            background-color: #082275; /* Fondo azul oscuro */  
+            color: white; /* Texto blanco en el pie */  
+            padding: 10px 0;  
+            border-radius: 0 0 8px 8px; /* Borde inferior redondeado */  
+        }  
+    </style>  
+</head>  
+
+<body>  
+
+    <header>  
+        <a href="index.html" class="back-button">Regresar al Menú</a>  
+        <img src="LOGO SMART.png" alt="Logo de Smart PC" class="logo"> <!-- Reemplaza por el enlace del logo -->  
+        <div class="header-title">Smart PC Servicio Técnico</div>  
+    </header>  
+
+    <div class="services-title">  
+    </div>  
+    <h2>Acerca de Nuestro Servicio Técnico</h2>  
+    <p>Nuestro equipo de técnicos altamente calificados cuenta con años de experiencia en el sector de la tecnología. Nos especializamos en ofrecer soluciones rápidas y efectivas para todos los problemas relacionados con hardware y software. Nuestro objetivo es garantizar que cada cliente esté satisfecho y que su equipo funcione de manera óptima.</p>  
+    <p>Además, buscamos educar a nuestros clientes sobre el mantenimiento preventivo para evitar problemas futuros y prolongar la vida útil de sus dispositivos. Realizamos evaluaciones periódicas y ofrecemos recomendaciones personalizadas según las necesidades de cada cliente.</p>  
+    <p>En Smart PC, la atención al cliente es primordial. Estamos comprometidos a brindar un servicio responsable y confiable, y nos aseguramos de que tengas la mejor experiencia posible al elegirnos para el soporte técnico de tu equipo.</p>  
+    <h2>Servicios Ofrecidos</h2>  
+    <div class="service-container">   
+        <div class="service-box" id="caja1">  
+            <strong>Asistencia Remota:</strong>  
+            <p>Proporcionamos resolución de problemas a distancia, asegurándonos de que tu equipo funcione correctamente desde la comodidad de tu hogar o trabajo. Puedes contactar a nuestros técnicos capacitados que te guiarán paso a paso en el proceso.</p>  
+            <div class="content">  
+                <p><strong>Objetivo:</strong> Proporcionar resolución de problemas a distancia y garantizar el funcionamiento correcto del equipo del cliente.</p>  
+            </div>  
+        </div>  
+        <div class="service-box" id="caja2">  
+            <strong>Diagnóstico de Hardware:</strong>  
+            <p>Nuestros expertos realizan una evaluación integral de tu hardware para identificar y reparar cualquier falla física que pueda estar afectando el rendimiento de tu equipo. Garantizamos un servicio rápido y eficaz para que vuelvas a trabajar sin contratiempos.</p>  
+            <div class="content">  
+                <p><strong>Objetivo:</strong> Identificar y reparar fallas físicas en el hardware para asegurar un rendimiento óptimo del equipo.</p>  
+            </div>  
+        </div>  
+        <div class="service-box" id="caja3">  
+            <strong>Soporte de Software:</strong>  
+            <p>Brindamos instalación, configuración y actualización de programas, así como asistencia con sistemas operativos. Nuestros técnicos están capacitados para resolver cualquier inconveniente relacionado con software en diferentes plataformas.</p>  
+            <div class="content">  
+                <p><strong>Objetivo:</strong> Facilitar la instalación, configuración y actualización de software para mejorar la funcionalidad del sistema operativo.</p>  
+            </div>  
+        </div>  
+        <div class="service-box" id="caja4">  
+            <strong>Consejos de Mantenimiento:</strong>  
+            <p>Te ofrecemos recomendaciones prácticas para el mantenimiento de tu equipo. Aprenderás cómo cuidar tu computadora, mejorar su rendimiento y extender su vida útil mediante técnicas simples y efectivas.</p>  
+            <div class="content">  
+                <p><strong>Objetivo:</strong> Educar a los clientes sobre prácticas de mantenimiento para prolongar la vida útil de sus dispositivos.</p>  
+            </div>  
+        </div>  
+    </div>  
+    <footer>  
+        <p>&copy; 2025 Smart PC. Todos los derechos reservados.</p>  
+    </footer>  
+
+</body>  
+</html>
